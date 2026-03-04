@@ -1,0 +1,131 @@
+{
+  "info": {
+    "_postman_id": "e5667982-0b2c-484f-82a3-ac8307b2da82",
+    "name": "mycollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46387618",
+    "_collection_link": "https://go.postman.co/collection/46387618-e5667982-0b2c-484f-82a3-ac8307b2da82?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GETRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList?products/id=1",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ],
+          "query": [
+            {
+              "key": "products/id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUTRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 49, \"name\": \"Laces Top For Women\", \"price\": \"Rs. 1900\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POSTRequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 44, \"name\": \"Laces Top For Women\", \"price\": \"Rs. 1900\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETERequest",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"id\": 44, \"name\": \"Laces Top For Women\", \"price\": \"Rs. 1900\", \"brand\": \"Mast & Harbour\", \"category\": {\"usertype\": {\"usertype\": \"Women\"}, \"category\": \"Tops\"}}"
+        },
+        "url": {
+          "raw": "https://automationexercise.com/api/productsList",
+          "protocol": "https",
+          "host": [
+            "automationexercise",
+            "com"
+          ],
+          "path": [
+            "api",
+            "productsList"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
