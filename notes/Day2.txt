@@ -1,0 +1,38 @@
+First create a workspace -- rename, delete workspace
+
+we can create any number of collections inside workspace
+
+Collections contains any number of folders and http requests
+
+Collections -- create, rename,delete,run the colection 
+Under colections
+
+GET -- retrieve the resource from the database
+POST -- creates a resource on the database
+PUT  -- updates the existing resource on the database
+PATCH -- update partial details of resource in the database
+DELETE -- deletes a resource in the database 
+
+Validations :
+
+status code 
+time
+size
+response body 
+cookies
+headers
+
+POST -- no query parameters are needed -- only path parameters are needed -- 201 status code 
+
+we need to provide the request payload for POST in body --> raw --> JSON format
+
+
+PUT -- to update - we need to specify the id - provide request payload 
+
+HTTP Status Code :
+
+Level 200 -- Success
+
+200 - OK 
+
+
