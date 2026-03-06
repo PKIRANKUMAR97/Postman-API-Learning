@@ -1,0 +1,22 @@
+Step1 : NodeJs -- install 
+
+npm - node package manager 
+Step2 :  we have to install json server using this npm 
+
+https://nodejs.org/en/download   --- windows installer msi 
+
+in environmental variables , we need to add nodejs and nodejs modules
+we need to check by using cmd prompt :
+node --version 
+
+npm --version 
+
+step 2 :  install json server 
+
+in cmd , we need to execute npm install -g json-server
+
+for creating our own api , we need all the above installations 
+
+
+
+

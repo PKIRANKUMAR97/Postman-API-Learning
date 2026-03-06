@@ -1,0 +1,131 @@
+{
+  "info": {
+    "_postman_id": "0855a53d-e519-4731-84e3-cdd2cc61009c",
+    "name": "StudentsAPIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46387618",
+    "_collection_link": "https://go.postman.co/collection/46387618-0855a53d-e519-4731-84e3-cdd2cc61009c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All Students Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Student Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/students/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create New Student",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"name\": \"Aisha\",\r\n    \"age\": 28,\r\n    \"course\": \"JAVA\",\r\n    \"grade\": \"A\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update  resource",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"dc2b\",\r\n    \"name\": \"Aisha Begum\",\r\n    \"age\": 28,\r\n    \"course\": [\"JAVA\",\"python\"],\r\n    \"grade\": \"A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/dc2b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "dc2b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": \"dc2b\",\r\n    \"name\": \"Aisha Begum\",\r\n    \"age\": 28,\r\n    \"course\": [\"JAVA\",\"python\"],\r\n    \"grade\": \"A\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/dc2b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "students",
+            "dc2b"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
