@@ -17,6 +17,64 @@ in cmd , we need to execute npm install -g json-server
 
 for creating our own api , we need all the above installations 
 
+tests/validations :
+
+JSON -- data format --we will send data in low weighted with encryption and decryption .
+so we use JSON or XML format for sending data between client and server .
+
+Key : value 
+
+key -- in double quotes ""
+values -- string in ""
+
+eg :
+
+{
+"name" : "Kiran"
+}
+
+Data types:
+----------------
+Number 
+String 
+Boolean 
+Null
+Object 
+Array 
+
+
+student -- sid ,name , grade
+
+{
+
+"students": [
+
+{"sid": 101,
+"sname":"john",
+"grade":"A"
+},
+
+{"sid": 102,
+"sname":"Abar",
+"grade":"A"
+},
+
+{"sid": 101,
+"sname":"Cian",
+"grade":"A"
+}
+            ]
+
+
+}
+
+https://jsonpathfinder.com/
+https://jsonpath.com/
+
+
+
+
+
 
 
 
