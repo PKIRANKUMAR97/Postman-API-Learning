@@ -9,6 +9,35 @@
   "item": [
     {
       "name": "Get All Students Data",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () \r",
+              "{\r",
+              "    pm.response.to.have.status(200);\r",
+              "}\r",
+              ");\r",
+              "\r",
+              "pm.test(\"Response test is OK \",()=>\r",
+              "{\r",
+              "    pm.response.to.have.status(\"OK\");\r",
+              "}\r",
+              "\r",
+              ");\r",
+              "\r",
+              "pm.test(\"avaialble in one of codes 200 or 201\",function()\r",
+              "{\r",
+              " pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [],

@@ -1,0 +1,49 @@
+Response Validations :
+---------------------------
+
+Status codes
+Headers
+cookies
+Response Time 
+Response Body 
+
+assertion-- validation 
+
+pm --library is needed - assertions are available 
+this assertion functions--- javascript 
+
+we need to write our own js function , we will call that assertion functions here 
+
+
+javascript function 
+	pm.function 
+
+
+Normal function
+Arrow function 
+
+js framework -- chai assertion library
+
+postman uses -- chai assertion library
+
+pm.test( "Test name / description " , function()
+	{
+	
+	// assertion ;
+
+	}
+	);
+
+pm.test( "Test name / description " , () =>
+	{
+	
+	// assertion;
+
+	}
+	);
+
+
+validations should be written in Tests tab in postman.
+
+
+

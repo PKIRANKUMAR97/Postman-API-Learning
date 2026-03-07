@@ -17,6 +17,10 @@ in cmd , we need to execute npm install -g json-server
 
 for creating our own api , we need all the above installations 
 
+after that open folder where json things are available and run the below command 
+
+
+
 tests/validations :
 
 JSON -- data format --we will send data in low weighted with encryption and decryption .
@@ -71,7 +75,7 @@ student -- sid ,name , grade
 https://jsonpathfinder.com/
 https://jsonpath.com/
 
-
+c
 
 
 
