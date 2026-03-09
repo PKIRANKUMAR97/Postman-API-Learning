@@ -1,0 +1,64 @@
+Pre request script ----> request -----> Response -----> Post response 
+
+
+Collection 
+Colder
+Request
+
+Variables in postman :
+----------------------
+
+what --
+why --
+where -- 
+
+
+
+scope 
+-------
+
+Global 
+Collection
+Environment
+Local
+Data
+
+Global variable : throughout the workspace -- accessible everywhere
+Collection variable : accessible within collection 
+Environment Variable : QA, dev , prod --access in all collections in particular environments
+Local variables -- create at request level -
+
+pm.variables.set("url_local","http://localhost:3000/students")
+
+data variables -- in external files 
+
+creating variables using pre - request script 
+
+//local variable 
+pm.variables.set("url_local","http://localhost:3000/students")
+
+//global variable
+pm.globals.set("userid_global","2");
+
+
+//environment variable 
+pm.environment.set("userid_env","3");
+
+//collection variable 
+pm.collectionVariables.set("userid_collect","5");
+
+
+/ capture values from variables 
+console.log(pm.variables.get("url_local"));
+console.log(pm.globals.get("userid_global"));
+console.log(pm.environment.get("userid_env"));
+console.log(pm.collectionVariables.get("userid_collect"));
+
+// remove variables 
+
+pm.globals.unset("userid_global");
+pm.environment.unset("userid_env");
+pm.collectionVariables.unset("userid_collect")
+
+
+

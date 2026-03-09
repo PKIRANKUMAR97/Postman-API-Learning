@@ -33,10 +33,13 @@
     },
     {
       "id": "5",
-      "name": "Karan",
-      "age": 21,
-      "course": "Civil Engineering",
-      "grade": "C"
+      "name": "Aisha Begum",
+      "age": 28,
+      "course": [
+        "JAVA",
+        "python"
+      ],
+      "grade": "A"
     },
     {
       "id": "6",
@@ -71,6 +74,13 @@
     },
     {
       "id": "132f",
+      "name": "Aisha",
+      "age": 28,
+      "course": "JAVA",
+      "grade": "A"
+    },
+    {
+      "id": "e424",
       "name": "Aisha",
       "age": 28,
       "course": "JAVA",
