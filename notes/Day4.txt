@@ -45,5 +45,95 @@ pm.test( "Test name / description " , () =>
 
 validations should be written in Tests tab in postman.
 
+headers -- content type / content length
+
+content type - json or not 
+
+1. preasence of header 
+
+pm.test("Content-Type header is present or not " ,()=>
+	{
+	pm.response.to.have.header("Content-Type");
+	}
+	);
+
+
+2. value of header 
+
+pm.test("check the value of content-type", ()=>
+{
+ pm.expect(pm.response.headers.get("Content-Type")).to.eql("application/json");
+}
+);
+
+
+Testing Cookies :
+
+cookie presence  --
+
+pm.test("cookies language not available", ()=>
+{
+ pm.expect(pm.cookies.has('language')).to.be.false;
+}
+);
+
+cookie value --
+
+pm.test("cookies language  available is english", ()=>
+{
+ pm.expect(pm.cookies.get('language')).to.eql('en-gb');
+}
+);
+
+
+Testing Response Time :
+
+pm. test ("responce time is below ",()=>
+	{
+	pm.expect(pm.response.responseTime).to.be.below(200);
+	});
+
+
+Response Body :
+--------------------
+we need to capture entire response into variable .
+
+Asserting a value type : data type validation 
+
+const jsonData = pm .response.json()
+
+pm.test("Test data type of response",()=>
+	{
+	pm.expect(jsonData).to.be.an("object");
+	pm.expect(jspnData.name).to.be.a("string");
+		pm.expect(jspnData.id).to.be.a("number");
+	pm.expect(jspnData.courses).to.be.an("array");
+
+	});
+
+Asserting array properties: single -- to .include ("")
+multiple --to.have.members(["",""])
+
+Validating JSON fileds in response :
+pm.test("Test the values in a json object",()=>
+{
+    pm.expect(jsonData.id).to.eql("1");
+    pm.expect(jsonData.name).to.eql("Rahul");
+    pm.expect(jsonData.age).to.eql(21);
+    pm.expect(jsonData.course[0]).to.eql("Computer Science");
+    pm.expect(jsonData.course[1]).to.eql("Data Science");
+    pm.expect(jsonData.grade).to.eql("A");
+});
+
+json schema validation  :
+
+
+
+
+
+
+
+
+
 
 

@@ -4,7 +4,10 @@
       "id": "1",
       "name": "Rahul",
       "age": 21,
-      "course": "Computer Science",
+      "course": [
+        "Computer Science",
+        "Data Science"
+      ],
       "grade": "A"
     },
     {
@@ -19,6 +22,58 @@
       "name": "Arjun",
       "age": 20,
       "course": "Electronics",
+      "grade": "A"
+    },
+    {
+      "id": "4",
+      "name": "Neha",
+      "age": 23,
+      "course": "Mechanical Engineering",
+      "grade": "B"
+    },
+    {
+      "id": "5",
+      "name": "Karan",
+      "age": 21,
+      "course": "Civil Engineering",
+      "grade": "C"
+    },
+    {
+      "id": "6",
+      "name": "Sneha",
+      "age": 22,
+      "course": "Electrical Engineering",
+      "grade": "A"
+    },
+    {
+      "id": "7",
+      "name": "Rohit",
+      "age": 24,
+      "course": [
+        "Computer Science",
+        "AI"
+      ],
+      "grade": "B"
+    },
+    {
+      "id": "8",
+      "name": "Anjali",
+      "age": 20,
+      "course": "Information Technology",
+      "grade": "A"
+    },
+    {
+      "id": "8",
+      "name": "Anjali",
+      "age": 20,
+      "course": "Information Technology",
+      "grade": "A"
+    },
+    {
+      "id": "132f",
+      "name": "Aisha",
+      "age": 28,
+      "course": "JAVA",
       "grade": "A"
     }
   ],
