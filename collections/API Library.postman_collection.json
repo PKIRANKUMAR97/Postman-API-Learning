@@ -1,0 +1,211 @@
+{
+  "info": {
+    "_postman_id": "3ff07ac4-c911-409c-a081-598d4a8b8e70",
+    "name": "API Library",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46387618",
+    "_collection_link": "https://go.postman.co/collection/46387618-3ff07ac4-c911-409c-a081-598d4a8b8e70?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GetBooks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base URL}}/books",
+          "host": [
+            "{{Base URL}}"
+          ],
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FilterBooks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base URL}}/books?genre=finance&checkedOut=false",
+          "host": [
+            "{{Base URL}}"
+          ],
+          "path": [
+            "books"
+          ],
+          "query": [
+            {
+              "key": "genre",
+              "value": "finance",
+              "type": "text"
+            },
+            {
+              "key": "checkedOut",
+              "value": "false",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PathParameter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.github.com/users/kiran",
+          "protocol": "https",
+          "host": [
+            "api",
+            "github",
+            "com"
+          ],
+          "path": [
+            "users",
+            "kiran"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Multi Path Parameter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.github.com/repos/postmanlabs/newman",
+          "protocol": "https",
+          "host": [
+            "api",
+            "github",
+            "com"
+          ],
+          "path": [
+            "repos",
+            "postmanlabs",
+            "newman"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Books By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{Base URL}}/books/:id",
+          "host": [
+            "{{Base URL}}"
+          ],
+          "path": [
+            "books",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "0df0d91f-17a5-4875-b87d-dfa39e2a0910"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Your Own Book",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "console.log(pm.response.json())"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-key",
+            "value": "postmanrulz",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n        \r\n        \"title\": \"Cricbuzz heros\",\r\n        \"author\": \"Kiran Kumar\",\r\n        \"genre\": \"finance\",\r\n        \"yearPublished\": 2026\r\n        \r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{Base URL}}/books",
+          "host": [
+            "{{Base URL}}"
+          ],
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Base URL",
+      "value": ""
+    },
+    {
+      "key": "bookId",
+      "value": ""
+    },
+    {
+      "key": "id",
+      "value": ""
+    },
+    {
+      "key": "author_var",
+      "value": ""
+    }
+  ]
+}
