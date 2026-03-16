@@ -1,0 +1,4 @@
+Authentication types :
+------------------------
+basic : https://postman-echo.com/basic-auth         postman/password
+

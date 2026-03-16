@@ -1,0 +1,176 @@
+{
+  "info": {
+    "_postman_id": "303c6f0d-1179-433b-bc07-c9e0a33e1571",
+    "name": "Authentication",
+    "description": "openwether req is not working",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46387618",
+    "_collection_link": "https://go.postman.co/collection/46387618-303c6f0d-1179-433b-bc07-c9e0a33e1571?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "BasicAuthentication",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "password",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "postman",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/basic-auth",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "basic-auth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "BasicAuth",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "admin",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "admin",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://the-internet.herokuapp.com/basic_auth",
+          "protocol": "https",
+          "host": [
+            "the-internet",
+            "herokuapp",
+            "com"
+          ],
+          "path": [
+            "basic_auth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DigestAuth",
+      "request": {
+        "auth": {
+          "type": "digest",
+          "digest": [
+            {
+              "key": "password",
+              "value": "password",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "postman",
+              "type": "string"
+            },
+            {
+              "key": "algorithm",
+              "value": "MD5",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://postman-echo.com/digest-auth",
+          "protocol": "https",
+          "host": [
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "digest-auth"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "APIKeyAuth_openweathermap",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "7bcc06d2897cc66601653959ffec035a",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "appid",
+              "type": "string"
+            },
+            {
+              "key": "in",
+              "value": "header",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.openweathermap.org/data/2.5/weather?q=Delhi&units=metric&appid=7bcc06d2897cc66601653959ffec035a",
+          "protocol": "https",
+          "host": [
+            "api",
+            "openweathermap",
+            "org"
+          ],
+          "path": [
+            "data",
+            "2.5",
+            "weather"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "Delhi"
+            },
+            {
+              "key": "units",
+              "value": "metric"
+            },
+            {
+              "key": "appid",
+              "value": "7bcc06d2897cc66601653959ffec035a"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
