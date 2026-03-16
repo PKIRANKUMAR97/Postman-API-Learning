@@ -1,0 +1,215 @@
+{
+  "info": {
+    "_postman_id": "866298ff-d25f-45d8-abe8-99e2214300d8",
+    "name": "Users-Chaining Concept",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46387618",
+    "_collection_link": "https://go.postman.co/collection/46387618-866298ff-d25f-45d8-abe8-99e2214300d8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create New User",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "var random = Math.random().toString(36).substring(2)\r",
+              "var userName = \"Surya\"+random;\r",
+              "var userEmail= \"Surya\"+random+\"@gmail.com\";\r",
+              "\r",
+              "pm.environment.set(\"email_env\",userEmail);\r",
+              "pm.environment.set(\"name_env\",userName);\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "jsonData = JSON.parse(responseBody)\r",
+              "pm.environment.set(\"userid_env\", jsonData.id)"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"name\": \"{{name_env}}\",\r\n    \"email\": \"{{email_env}}\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"Pass\"\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User Details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// validating Json filds in response \r",
+              "pm.test(\"values of json fields\",()=> \r",
+              "{\r",
+              "    var jsonData = pm.response.json();\r",
+              "    \r",
+              "\r",
+              "    pm.expect(jsonData.id).to.eql(pm.environment.get(\"userid_env\"));\r",
+              "    pm.expect(jsonData.email).to.eql(pm.environment.get(\"email_env\"));\r",
+              "    pm.expect(jsonData.name).to.eql(pm.environment.get(\"name_env\"));\r",
+              "\r",
+              "}\r",
+              ");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/{{userid_env}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "{{userid_env}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User Details",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "var random = Math.random().toString(36).substring(2)\r",
+              "var userName = \"Surya\"+random;\r",
+              "var userEmail= \"Surya\"+random+\"@gmail.com\";\r",
+              "\r",
+              "pm.environment.set(\"email_env\",userEmail);\r",
+              "pm.environment.set(\"name_env\",userName);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"name\": \"{{name_env}}\",\r\n    \"email\": \"{{email_env}}\",\r\n    \r\n    \"status\": \"Fail\"\r\n  }"
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/{{userid_env}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "{{userid_env}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.environment.unset(\"userid_env\");\r",
+              "pm.environment.unset(\"email_env\");\r",
+              "pm.environment.unset(\"name_env\");\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/{{userid_env}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "{{userid_env}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

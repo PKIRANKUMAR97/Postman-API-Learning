@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Arjun Mehta",
+      "email": "arjun1@example.com",
+      "gender": "male",
+      "status": "Pass"
+    },
+    {
+      "id": "2",
+      "name": "Sneha Reddy",
+      "email": "sneha2@example.com",
+      "gender": "female",
+      "status": "Fail"
+    },
+    {
+      "id": "3",
+      "name": "Rahul Sharma",
+      "email": "rahul3@example.com",
+      "gender": "male",
+      "status": "Pass"
+    },
+    {
+      "id": "4",
+      "name": "Priya Nair",
+      "email": "priya4@example.com",
+      "gender": "female",
+      "status": "Pass"
+    },
+    {
+      "id": "5",
+      "name": "Karan Patel",
+      "email": "karan5@example.com",
+      "gender": "male",
+      "status": "Fail"
+    },
+    {
+      "id": "6",
+      "name": "Ananya Das",
+      "email": "ananya6@example.com",
+      "gender": "female",
+      "status": "Pass"
+    },
+    {
+      "id": "7",
+      "name": "Vikram Singh",
+      "email": "vikram7@example.com",
+      "gender": "male",
+      "status": "Fail"
+    },
+    {
+      "id": "8",
+      "name": "Neha Gupta",
+      "email": "neha8@example.com",
+      "gender": "female",
+      "status": "Pass"
+    },
+    {
+      "id": "9",
+      "name": "Rohit Kumar",
+      "email": "rohit9@example.com",
+      "gender": "male",
+      "status": "Pass"
+    },
+    {
+      "id": "10",
+      "name": "Pooja Verma",
+      "email": "pooja10@example.com",
+      "gender": "female",
+      "status": "Fail"
+    },
+    {
+      "id": "11",
+      "name": "Aditya Rao",
+      "email": "aditya11@example.com",
+      "gender": "male",
+      "status": "Pass"
+    },
+    {
+      "id": "12",
+      "name": "Kavya Iyer",
+      "email": "kavya12@example.com",
+      "gender": "female",
+      "status": "Pass"
+    },
+    {
+      "id": "13",
+      "name": "Manoj Yadav",
+      "email": "manoj13@example.com",
+      "gender": "male",
+      "status": "Fail"
+    },
+    {
+      "id": "14",
+      "name": "Divya Kapoor",
+      "email": "divya14@example.com",
+      "gender": "female",
+      "status": "Pass"
+    },
+    {
+      "id": "15",
+      "name": "Sandeep Jain",
+      "email": "sandeep15@example.com",
+      "gender": "male",
+      "status": "Fail"
+    },
+    {
+      "id": "5d31",
+      "name": "Suryajvlcyr98t5l",
+      "email": "Suryajvlcyr98t5l@gmail.com",
+      "gender": "male",
+      "status": "Pass"
+    },
+    {
+      "id": "28fa",
+      "name": "Suryaicxzm3wy0eh",
+      "email": "Suryaicxzm3wy0eh@gmail.com",
+      "gender": "male",
+      "status": "Pass"
+    },
+    {
+      "id": "24f1",
+      "name": "Surya9964b2n8y6r",
+      "email": "Surya9964b2n8y6r@gmail.com",
+      "gender": "male",
+      "status": "Pass"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

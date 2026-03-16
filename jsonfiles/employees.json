@@ -1,0 +1,105 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Rahul Sharma",
+      "age": 29,
+      "department": "QA",
+      "designation": "Automation Tester",
+      "salary": 650000,
+      "email": "rahul.sharma@example.com",
+      "location": "Hyderabad"
+    },
+    {
+      "id": "2",
+      "name": "Priya Verma",
+      "age": 27,
+      "department": "Development",
+      "designation": "Software Engineer",
+      "salary": 720000,
+      "email": "priya.verma@example.com",
+      "location": "Bangalore"
+    },
+    {
+      "id": "3",
+      "name": "Arjun Reddy",
+      "age": 31,
+      "department": "QA",
+      "designation": "SDET",
+      "salary": 850000,
+      "email": "arjun.reddy@example.com",
+      "location": "Hyderabad"
+    },
+    {
+      "id": "4",
+      "name": "Sneha Kapoor",
+      "age": 26,
+      "department": "HR",
+      "designation": "HR Executive",
+      "salary": 500000,
+      "email": "sneha.kapoor@example.com",
+      "location": "Mumbai"
+    },
+    {
+      "id": "5",
+      "name": "Vikram Singh",
+      "age": 34,
+      "department": "DevOps",
+      "designation": "DevOps Engineer",
+      "salary": 950000,
+      "email": "vikram.singh@example.com",
+      "location": "Pune"
+    },
+    {
+      "id": "6",
+      "name": "Anjali Mehta",
+      "age": 28,
+      "department": "QA",
+      "designation": "Manual Tester",
+      "salary": 550000,
+      "email": "anjali.mehta@example.com",
+      "location": "Chennai"
+    },
+    {
+      "id": "7",
+      "name": "Rohan Gupta",
+      "age": 30,
+      "department": "Development",
+      "designation": "Backend Developer",
+      "salary": 900000,
+      "email": "rohan.gupta@example.com",
+      "location": "Delhi"
+    },
+    {
+      "id": "8",
+      "name": "Pooja Nair",
+      "age": 25,
+      "department": "Support",
+      "designation": "Technical Support Engineer",
+      "salary": 480000,
+      "email": "pooja.nair@example.com",
+      "location": "Kochi"
+    },
+    {
+      "id": "9",
+      "name": "Karthik Rao",
+      "age": 32,
+      "department": "QA",
+      "designation": "Test Lead",
+      "salary": 1050000,
+      "email": "karthik.rao@example.com",
+      "location": "Hyderabad"
+    },
+    {
+      "id": "10",
+      "name": "Neha Agarwal",
+      "age": 29,
+      "department": "Business Analyst",
+      "designation": "BA",
+      "salary": 700000,
+      "email": "neha.agarwal@example.com",
+      "location": "Noida"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

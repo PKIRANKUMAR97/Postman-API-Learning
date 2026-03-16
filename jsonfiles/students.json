@@ -85,6 +85,66 @@
       "age": 28,
       "course": "JAVA",
       "grade": "A"
+    },
+    {
+      "id": "eb4a",
+      "name": "Pardhuu",
+      "age": 28,
+      "course": [
+        "JAVA SCRIPT",
+        "SELENIUM"
+      ],
+      "grade": "A"
+    },
+    {
+      "id": "982b",
+      "name": "Pardhuu",
+      "age": 28,
+      "course": [
+        "JAVA SCRIPT",
+        "SELENIUM"
+      ],
+      "grade": "A"
+    },
+    {
+      "id": "55e1",
+      "name": "Pardhuu",
+      "age": 28,
+      "course": [
+        "JAVA SCRIPT",
+        "SELENIUM"
+      ],
+      "grade": "A"
+    },
+    {
+      "id": "83d7",
+      "name": "Pardhuu",
+      "age": 28,
+      "course": [
+        "JAVA SCRIPT",
+        "SELENIUM"
+      ],
+      "grade": "A"
+    },
+    {
+      "id": "e062",
+      "name": "Pardhuu",
+      "age": 28,
+      "course": [
+        "JAVA SCRIPT",
+        "SELENIUM"
+      ],
+      "grade": "A"
+    },
+    {
+      "id": "714d",
+      "name": "Pardhuu",
+      "age": 28,
+      "course": [
+        "JAVA SCRIPT",
+        "SELENIUM"
+      ],
+      "grade": "A"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

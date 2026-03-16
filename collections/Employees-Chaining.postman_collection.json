@@ -1,0 +1,198 @@
+{
+  "info": {
+    "_postman_id": "834dd324-7c52-49d2-9347-5dc8982e2fe2",
+    "name": "Employees-Chaining",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46387618",
+    "_collection_link": "https://go.postman.co/collection/46387618-834dd324-7c52-49d2-9347-5dc8982e2fe2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Employee",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "var random = Math.random().toString(36).substring(2)\r",
+              "var ename=\"kiran\"+ random\r",
+              "var email=\"kiran\"+random+\"@yahoo.com\"\r",
+              "\r",
+              "pm.environment.set(\"emp_mail\",email);\r",
+              "pm.environment.set(\"emp_name\",ename);\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "jsonData = JSON.parse(responseBody)\r",
+              "\r",
+              "pm.environment.set(\"emp_id\", jsonData.id)\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n      \r\n      \"name\": \"{{emp_name}}\",\r\n      \"age\": 29,\r\n      \"department\": \"Business Analyst\",\r\n      \"designation\": \"BA\",\r\n      \"salary\": 780000,\r\n      \"email\": \"{{emp_mail}}\",\r\n      \"location\": \"Kolkata\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Emp details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "// validate json data response\r",
+              "\r",
+              "pm.test(\"validating json data for the created user\",()=>\r",
+              "{\r",
+              "    var JsonData =pm.response.json();\r",
+              "    pm.expect(JsonData.id).to.eql(pm.environment.get(\"emp_id\"));\r",
+              "    pm.expect(JsonData.name).to.eql(pm.environment.get(\"emp_name\"));\r",
+              "    pm.expect(JsonData.email).to.eql(pm.environment.get(\"emp_mail\"));\r",
+              "}\r",
+              ");"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/employees/{{emp_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "employees",
+            "{{emp_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Emp details",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "var random= Math.random().toString(36).substring(2)\r",
+              "var emp_name = \"Rajesh\"+ random\r",
+              "var emp_email = \"rajesh\"+ random + \"@gmail.com\" \r",
+              "\r",
+              "pm.environment.set(\"ename\",emp_name)\r",
+              "pm.environment.set(\"email\",emp_email)"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"{{ename}}\",\r\n      \r\n      \"salary\": 1780000,\r\n      \"email\": \"{{email}}\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/employees/{{emp_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "employees",
+            "{{emp_id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Emp",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.environment.unset(\"emp_id\");\r",
+              "pm.environment.unset(\"emp_mail\");\r",
+              "pm.environment.unset(\"emp_name\");\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/employees/{{emp_id}}",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "employees",
+            "{{emp_id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

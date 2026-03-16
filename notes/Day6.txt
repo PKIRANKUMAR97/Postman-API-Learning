@@ -1,0 +1,25 @@
+Chaining of API--one response become a request to another api 
+
+Student API : 
+
+https://gorest.co.in
+/public/v2/users
+
+POST      /public/v2/users	                Create a new user
+GET      /public/v2/users/7881625	        Get user details
+PUT|PATCH  /public/v2/users/7881625	Update user details
+DELETE   /public/v2/users/7881625   	Delete user
+
+
+cd1c11f3c7b4ad57a70e228e1095d16f706850f14e39037c6c4cd9ae57935978
+
+
+ee9fe2d1d59c5df370f7a4bc7ee69cae22bd41fdb82d5c0cf7df1df83da378db
+
+⭐ Real Interview Level Chaining Flow
+
+1️⃣ Create User → POST
+2️⃣ Extract ID → Test Script
+3️⃣ Get User Details → GET
+4️⃣ Update User → PUT/PATCH
+5️⃣ Delete User → DELETE
