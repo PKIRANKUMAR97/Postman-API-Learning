@@ -1,0 +1,4 @@
+Petstore -- Json XML 
+swagger -- exploring API request -- interactive document
+create a documentation 
+publish the documentation-- then we will get the url 
