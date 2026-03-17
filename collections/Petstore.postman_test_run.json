@@ -1,0 +1,146 @@
+{
+	"id": "11f0a039-8ba9-4604-8a32-33e04d3c7f3c",
+	"name": "Petstore",
+	"timestamp": "2026-03-17T14:52:13.861Z",
+	"collection_id": "46387618-3b52e785-3717-4e2d-8663-ce7d4dd83666",
+	"folder_id": 0,
+	"environment_id": "46387618-4ad9ad1c-e402-4267-955f-9b39e9fa69a3",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2026-03-17T14:52:11.408Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "903dd321-8c31-4002-b32f-86e2068ea43e",
+			"name": "CreateUser",
+			"url": "https://petstore.swagger.io/v2/user",
+			"time": 855,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code": true
+			},
+			"testPassFailCounts": {
+				"check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				855
+			],
+			"allTests": [
+				{
+					"check status code": true
+				}
+			]
+		},
+		{
+			"id": "bcfb5e1b-0e6f-4c79-b844-407bbd324287",
+			"name": "Get User By Name",
+			"url": "https://petstore.swagger.io/v2/user/sunckcpzfs8v7q",
+			"time": 216,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code": true
+			},
+			"testPassFailCounts": {
+				"check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				216
+			],
+			"allTests": [
+				{
+					"check status code": true
+				}
+			]
+		},
+		{
+			"id": "ed798fff-43f9-48ca-9523-49fd5a906b35",
+			"name": "Update User By Name",
+			"url": "https://petstore.swagger.io/v2/user/sunckcpzfs8v7q",
+			"time": 215,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"status code validation": true
+			},
+			"testPassFailCounts": {
+				"status code validation": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				215
+			],
+			"allTests": [
+				{
+					"status code validation": true
+				}
+			]
+		},
+		{
+			"id": "73c5f539-51b8-4e6c-beed-aebf0bbc6f7d",
+			"name": "Delete User",
+			"url": "https://petstore.swagger.io/v2/user/sunckcpzfs8v7q",
+			"time": 216,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check status code": true
+			},
+			"testPassFailCounts": {
+				"check status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				216
+			],
+			"allTests": [
+				{
+					"check status code": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1502,
+	"collection": {
+		"requests": [
+			{
+				"id": "903dd321-8c31-4002-b32f-86e2068ea43e",
+				"method": "POST"
+			},
+			{
+				"id": "bcfb5e1b-0e6f-4c79-b844-407bbd324287",
+				"method": "GET"
+			},
+			{
+				"id": "ed798fff-43f9-48ca-9523-49fd5a906b35",
+				"method": "PUT"
+			},
+			{
+				"id": "73c5f539-51b8-4e6c-beed-aebf0bbc6f7d",
+				"method": "DELETE"
+			}
+		]
+	}
+}
