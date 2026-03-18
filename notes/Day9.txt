@@ -2,3 +2,43 @@ Petstore -- Json XML
 swagger -- exploring API request -- interactive document
 create a documentation 
 publish the documentation-- then we will get the url 
+
+E commerce application -API 
+
+npm -v 
+node -v 
+
+for running the collection scripts through command line we need to install newman through command  :
+npm install -g newman
+
+for getting the html report through newman , we need to install the below through command :
+npm install -g newman-reporter-html
+
+
+Run collection in cmd line :
+Approach 1 :
+go to the exported location of collection and open cmd and run the below command 
+
+newman run Petstore_XML_PetModel.postman_collection.json
+
+for getting html report :
+newman run Petstore_XML_PetModel.postman_collection.json -r html
+
+Approach 2 :
+ run the collection remotly using url 
+
+go to collection - share --via json link -copy link and this is the link 
+
+https://kiran-2341759.postman.co/workspace/myworkspace~f9b16db4-cbaa-4daf-aba8-88bc14b4f4d9/collection/46387618-a00bdab2-1b33-493e-8276-eb363b5ffe4b?action=share&creator=46387618&active-environment=46387618-4ad9ad1c-e402-4267-955f-9b39e9fa69a3 
+
+run  urlofcollection -r html 
+
+How to run in jenkins :
+
+congigure - source code management - git -- 
+
+branches to build- main 
+build steps - windows command :
+dir
+dir collections
+newman run collections/Petstore_XML_PetModel.postman_collection.json
